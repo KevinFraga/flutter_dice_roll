@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:dice_roll_app/big_white_text.dart';
+import 'package:dice_roll_app/gradient_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,13 +20,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('First Screen'),
         ),
-        body: const Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Hello world'),
-              Text('Dice Roll'),
-            ],
+        body: const GradientContainer(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                BigWhiteText(text: 'Hello world'),
+                BigWhiteText(text: 'Dice Roll'),
+              ],
+            ),
           ),
         ),
       ),
