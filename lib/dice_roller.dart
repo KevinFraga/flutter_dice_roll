@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:dice_roll_app/big_white_text.dart';
 import 'package:flutter/material.dart';
 
@@ -11,18 +12,13 @@ class DiceRoller extends StatefulWidget {
 }
 
 class _DiceRollerState extends State<DiceRoller> {
-  var diceNumber = 3;
+  final Random randomizer = Random();
+  late int diceNumber = randomizer.nextInt(6) + 1;
 
   void rollDice() {
-    if (diceNumber < 6) {
-      setState(() {
-        diceNumber++;
-      });
-    } else {
-      setState(() {
-        diceNumber = 1;
-      });
-    }
+    setState(() {
+      diceNumber = randomizer.nextInt(6) + 1;
+    });
   }
 
   @override
