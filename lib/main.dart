@@ -1,3 +1,4 @@
+import 'package:dice_roll_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 import 'package:dice_roll_app/big_white_text.dart';
 import 'package:dice_roll_app/gradient_container.dart';
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('First Screen'),
         ),
-        body: GradientContainer(
-          colors: const [
+        body: const GradientContainer(
+          colors: [
             Colors.white,
             Colors.blue,
             Colors.black,
@@ -31,12 +32,10 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                const BigWhiteText('Dice Roll'),
-                Image.asset(
-                  'assets/images/dice-1.png',
-                  width: 100,
-                ),
+                BigWhiteText('Dice Roll'),
+                DiceRoller(),
               ],
             ),
           ),
