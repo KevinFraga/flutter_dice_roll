@@ -20,13 +20,23 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('First Screen'),
         ),
-        body: const GradientContainer(
+        body: GradientContainer(
+          colors: const [
+            Colors.white,
+            Colors.blue,
+            Colors.black,
+            Colors.red,
+            Colors.green
+          ],
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                BigWhiteText(text: 'Hello world'),
-                BigWhiteText(text: 'Dice Roll'),
+                const BigWhiteText('Dice Roll'),
+                Image.asset(
+                  'assets/images/dice-1.png',
+                  width: 100,
+                ),
               ],
             ),
           ),

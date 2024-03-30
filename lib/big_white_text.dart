@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BigWhiteText extends StatelessWidget {
-  const BigWhiteText({super.key, required this.text});
+  const BigWhiteText(this.text, {super.key});
   final String text;
 
   @override
